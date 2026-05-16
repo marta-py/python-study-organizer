@@ -1,0 +1,26 @@
+{
+    "clase": "1.º BACH B (ciencias)",
+    "disponibilidad": {
+        "Lunes": 1.0,
+        "Martes": 6.0,
+        "Miércoles": 3.0,
+        "Jueves": 6.0,
+        "Viernes": 8.0,
+        "Sábado": 8.0,
+        "Domingo": 9.0
+    },
+    "examenes": [
+        {
+            "asig": "matematicas",
+            "dif": "1",
+            "fecha": "10/06/2026",
+            "horas": 15
+        },
+        {
+            "asig": "jasj",
+            "dif": "5",
+            "fecha": "10/06/2026",
+            "horas": 3
+        }
+    ]
+}

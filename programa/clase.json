@@ -6,25 +6,25 @@
       "Jueves": { "inicio": "09:00", "fin": "14:25", "materias": "Filosofía, Matemáticas, Biología, TIC, Física y Química, Gallego" },
       "Viernes": { "inicio": "09:00", "fin": "14:25", "materias": "Inglés, Biología, Castellano, Filosofía, Educación Física, Optativa" }
     },
-    "1.º BACH A (letras)": {
-      "Lunes": { "inicio": "09:00", "fin": "17:55", "materias": "Latín, Griego, Literatura Universal, Inglés, Matemáticas Aplicadas, Gallego, Educación Física, Filosofía" },
-      "Martes": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Latín, Hora libre, Griego, Literatura Universal, Matemáticas Aplicadas" },
-      "Miércoles": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Latín, Gallego, Educación Física, Matemáticas Aplicadas, Inglés" },
-      "Jueves": { "inicio": "09:00", "fin": "14:25", "materias": "Filosofía, Matemáticas Aplicadas, Literatura Universal, Historia Mundo Contemp., Latín, Gallego" },
-      "Viernes": { "inicio": "09:00", "fin": "14:25", "materias": "Inglés, Literatura Universal, Castellano, Filosofía, Educación Física, Griego" }
-    },
-    "1.º BACH A (ciencias)": {
-      "Lunes": { "inicio": "09:00", "fin": "17:55", "materias": "Física y Química, Dibujo Técnico, Biología, Inglés, Matemáticas, Gallego, Educación Física, Filosofía" },
-      "Martes": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Física y Química, Hora libre, Dibujo Técnico, Biología, Matemáticas" },
-      "Miércoles": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Física y Química, Gallego, Educación Física, Matemáticas, Inglés" },
-      "Jueves": { "inicio": "09:00", "fin": "14:25", "materias": "Filosofía, Matemáticas, Biología, Tecnología Industrial, Física y Química, Gallego" },
-      "Viernes": { "inicio": "09:00", "fin": "14:25", "materias": "Inglés, Biología, Castellano, Filosofía, Educación Física, Dibujo Técnico" }
-    },
-    "1.º BACH B (letras)": {
+      "1.º BACH B (letras)": {
       "Lunes": { "inicio": "09:00", "fin": "17:55", "materias": "Economía, Optativa, Historia Mundo Contemp./Griego, Inglés, Matemáticas Aplicadas/Latín, Gallego, Educación Física, Filosofía" },
       "Martes": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Economía, Hora libre, Optativa, Historia Mundo Contemp./Griego, Matemáticas Aplicadas/Latín" },
       "Miércoles": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Economía, Gallego, Educación Física, Matemáticas Aplicadas/Latín, Inglés" },
       "Jueves": { "inicio": "09:00", "fin": "14:25", "materias": "Filosofía, Matemáticas Aplicadas/Latín, Historia Mundo Contemp./Griego, Economía, Optativa, Gallego" },
       "Viernes": { "inicio": "09:00", "fin": "14:25", "materias": "Inglés, Historia Mundo Contemp./Griego, Castellano, Filosofía, Educación Física, Optativa" }
+    },
+    "1.º BACH A (letras)": {
+      "Lunes": { "inicio": "09:00", "fin": "17:55", "materias": "Economía, Optativa, Historia del Mundo Contemp./Griego, Castellano, Matemáticas Aplicadas/Latín, Hora Libre, Gallego, Educación Física" },
+      "Martes": { "inicio": "09:00", "fin": "14:25", "materias": "Inglés, Economía, Filosofía, Optativa, Historia del Mundo Contemp./Griego, Matemáticas Aplicadas/Latín" },
+      "Miércoles": { "inicio": "09:00", "fin": "14:25", "materias": "Gallego, Economía, Filosofía, Inglés, Matemáticas Aplicadas/Latín, Educación Física"  },
+      "Jueves": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Matemáticas Aplicadas/Latín, Economía, Optativa, Historia del Mundo Contemp./Griego, Inglés" },
+      "Viernes": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Historia del Mundo Contemp./Griego, Gallego, Educación Física, Filosofía, Optativa" }
+    },
+    "1.º BACH A (ciencias)": {
+      "Lunes": { "inicio": "09:00", "fin": "17:55", "materias": "Física y Química, Optativa, Biología, Castellano, Matemáticas, Hora Libre, Gallego, Educación Física" },
+      "Martes": { "inicio": "09:00", "fin": "14:25", "materias": "Inglés, Física y Química, Filosofía, Optativa, Biología, Matemáticas" },
+      "Miércoles": { "inicio": "09:00", "fin": "14:25", "materias": "Gallego, Física y Química, Filosofía, Inglés, Matemáticas, Educación Física"  },
+      "Jueves": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Matemáticas, Biología, Optativa, Física y Química, Inglés" },
+      "Viernes": { "inicio": "09:00", "fin": "14:25", "materias": "Castellano, Biología, Gallego, Educación Física, Filosofía, Optativa" }
     }
   }
