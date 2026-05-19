@@ -162,7 +162,8 @@ while True:
     print("2. Eliminar o editar exámenes guardados")
     print("3. Ver horario, horas libres de hoy y calendario")
     print("4. Ver tu plan de estudio recomendado.")
-    print("5. Salir")
+    print("5. Editar disponibilidad")
+    print("6. Salir")
 
 
     accion = input("¿Qué quieres hacer? Introduce el número correspondiente (1-4): ")
@@ -230,14 +231,16 @@ while True:
     elif accion == "2":
         ahora = datetime.now()
         
-        print("\nEDITAR/ELIMINAR EXÁMENES GUARDADOS\n")
+        print("\nEDITAR/ELIMINAR EXÁMENES GUARDADOS")
 
         if not examenes_pendientes:
             print("No hay exámenes pendientes guardados.¡Disfruta!")
+            input("\nPulsa Enter para volver ")
 
         else:
-            for i, ex in enumerate(examenes_pendientes):
-                print(f"{i+1}. {ex['asig']}: (horas necesarias {ex['horas']} - {ex['fecha']})")
+            
+            for i, ex in enumerate(examenes_pendientes): #enumera los examenes
+                print(f"{i+1}. {ex['asig']}: (horas necesarias {ex['horas']} - {ex['fecha']})") 
 
             print("\n¿Qué quieres hacer?")
             print("1. Eliminar un examen")
@@ -262,9 +265,9 @@ while True:
                         break # Salimos del bucle de borrar
                 
                     try:
-                        indice = int(entrada) - 1
+                        indice = int(entrada) - 1 #int convierte a número y ponemos como -1 porque empezamos con 1. para que sea más estético
                         if 0 <= indice < len(examenes_pendientes):
-                            borrado = examenes_pendientes.pop(indice)
+                            borrado = examenes_pendientes.pop(indice) 
                             guardar_todo() 
                             print(f"¡Examen de {borrado['asig']} eliminado!")
 
@@ -283,8 +286,8 @@ while True:
             elif opcion == "2":
                 try:
 
-                    indice = int(input("Número del examen a editar: ")) - 1
-                    if 0 <= indice < len(examenes_pendientes):
+                    indice = int(input("Número del examen a editar: ")) - 1 
+                    if 0 <= indice < len(examenes_pendientes): 
                         ex = examenes_pendientes[indice]
                         print(f"\nEditando {ex['asig']}. (Pulsa Enter para mantener actual)")
             
@@ -307,6 +310,7 @@ while True:
                     print("Entrada inválida.")
 
 
+            # Volver a menú principal
             elif opcion == "3":
                 print("Volviendo al menú principal...")
                 time.sleep(2)
@@ -338,6 +342,7 @@ while True:
             print(f"Las clases de hoy ya terminaron")
             
             if info_dia:
+
                 print("\n")
                 print(f"====INFORMACIÓN PARA MAÑANA {dia_manana.upper()}====")
                 print(f"Materias de mañana: {info_dia['materias']}")
@@ -392,6 +397,8 @@ while True:
     elif accion == "4":
         print("\n" + "="*35)
         print("   TU PLANIFICACIÓN SEMANAL")
+
+
         print("="*35)
 
         if not examenes_pendientes:
@@ -411,10 +418,11 @@ while True:
                 ahora = datetime.now()
                 diasrestantes = (fecha_examen - ahora).days + 1
 
+
                 if ex['dif'] == "1":
                     diasminimos = 8
                 
-                elif ex['dif'] == "1":
+                elif ex['dif'] == "2":
                     diasminimos = 5
                 
                 elif ex['dif'] == "3":
@@ -482,6 +490,73 @@ while True:
         input("\nPresiona Enter para regresar al menú...")   
     
     elif accion == "5":
+
+        print("\nEDITAR DISPONIBILIDAD")
+        print("Actualmente, tienes registrado como disponibilidad:")
+        
+        for dia, horas in disponibilidad_estudio.items(): # enseñamos lo guardado
+            print(f"- {dia}: {horas} h")
+
+        
+        print("1. Editar un día en específico")
+        print("2. Editar todos los días")
+        print("3. Salir.")
+
+        dis_opcion = input("¿Qué quieres hacer? ")
+
+        if dis_opcion == "1":
+            dia_cambio = input("\n¿Qué día quieres editar? (p.e: Lunes, Martes, Miércoles)").strip().capitalize()
+            cambiar_hora = True 
+            while True:
+                if dia_cambio in disponibilidad_estudio:
+                    while True:
+                        horas = int(input(f"¿Cuántas horas tienes para estudiar el {dia_cambio.lower()}"))
+
+                        try: 
+                            if 0 <= horas <= 24:
+                                disponibilidad_estudio[dia_cambio] = horas
+                                break 
+            
+                            else:
+                                print("Error: Introduce un número entre 0 y 24.")
+                                
+
+                        except ValueError:
+                            print("Error: Escribe un número válido.")
+            
+                    guardar_todo() 
+                    print("\nDisponibilidad guardada correctamente.")
+
+                else:
+                    print("Día no válido. Asegúrate de escribirlo bien (ej: Miércoles).")
+                    time.sleep(1.5)
+                    cambiar_hora = False
+
+                        
+
+            
+
+        if dis_opcion == "2":
+            for dia in dias_semana:
+                while True: 
+                    horas = int(input(f"¿Cuántas horas tienes para estudiar el {dia.lower()}? "))
+
+                    try:
+                        if 0 <= horas <= 24:
+                            disponibilidad_estudio[dia] = horas
+                            break 
+            
+                        else:
+                            print("Error: Introduce un número entre 0 y 24.")
+        
+                    except ValueError:
+                        print("Error: Escribe un número válido.")
+
+            guardar_todo() 
+            print("\nDisponibilidad guardada correctamente.")
+
+
+    elif accion == "6":
         print("Saliendo...")
         break
      
